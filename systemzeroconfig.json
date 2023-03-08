@@ -1,0 +1,15 @@
+[
+    {
+        "DisplayName": "File Encoding",
+        "Category": "command line arg",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "Dfile.encoding",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "Dfile.encoding",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "UTF-8",
+        "EnumValues": {}
+    }
+]

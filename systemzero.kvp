@@ -4,15 +4,9 @@ App.ApplicationReadyMode=Immediate
 App.BaseDirectory=./systemzero/
 App.CommandLineArgs=-jar -Dserver.port=25568 -Dfile.encoding=UTF-8 syzero.jar
 App.CommandLineParameterDelimiter= 
-<<<<<<< HEAD
 App.CommandLineParameterFormat=--{0}="{1}"
 App.DisplayName=SystemZero
 App.ExecutableLinux=java/bin/java
-=======
-App.CommandLineParameterFormat=
-App.DisplayName=SystemZero
-App.ExecutableLinux=java -jar -Dserver.port=25568 -Dfile.encoding=UTF-8 syzero.jar
->>>>>>> 82a8e7b86c0fe0d3e3cda6ddd23ae659e738aead
 App.ExecutableWin=
 App.ExitMethod=SIGKILL
 App.ExitString=stop
@@ -21,11 +15,7 @@ App.HasWritableConsole=false
 App.RapidStartup=true
 App.RootDir=./systemzero/
 App.UpdateSource=Multi
-<<<<<<< HEAD
-App.UpdateSources=[{"UpdateStageName": "Server Download","UpdateSourcePlatform": "All", "UpdateSource": "FetchURL", "UpdateSourceData": "https://doc-08-14-docs.googleusercontent.com/docs/securesc/c2k8rn8aj081bdnpho5pliil53l73acr/oak85rh81uqa6tf4jhv5uosba81mroao/1678313550000/10146292590017129430/05322466798800802213Z/1XxMsCBIBaQsz9c8UXB4bctB_iw949hor?e=download&uuid=9535af7d-7093-426c-812b-a39dbdd0faf5&nonce=1r4ud2djdjfhc&user=05322466798800802213Z&hash=ol3mh41urjbt4t1hc8i9kfh6he2p8unv", "UnzipUpdateSource": false}]
-=======
 App.UpdateSources=[{"UpdateStageName": "Server Download","UpdateSourcePlatform": "All", "UpdateSource": "FetchURL", "UpdateSourceData": "https://github.com/MC-Pixeld-Domain/AMPTemplates/raw/main/syzero.jar", "UnzipUpdateSource": false}]
->>>>>>> 82a8e7b86c0fe0d3e3cda6ddd23ae659e738aead
 App.WorkingDir=
 Console.AppReadyRegex=
 Console.ThrowawayMessageRegex=

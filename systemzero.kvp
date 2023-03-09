@@ -1,6 +1,6 @@
 Meta.DisplayName=SystemZero
 Meta.Description=SystemZero Demo
-Meta.OS=Windows
+Meta.OS=Windows, Linux
 Meta.Arch=x86_64
 Meta.Author=Pixeldweller
 Meta.URL=
@@ -21,7 +21,7 @@ App.DisplayName=SystemZero
 App.RootDir=./systemzero/
 App.BaseDirectory=./systemzero/
 App.ExecutableWin=java\bin\java.exe
-App.ExecutableLinux=
+App.ExecutableLinux=java/bin/java
 App.WorkingDir=
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=

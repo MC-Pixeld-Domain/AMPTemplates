@@ -1,12 +1,12 @@
 App.AdminMethod=STDIO
-App.ApplicationPort1=8080
+App.ApplicationPort1=25568
 App.ApplicationReadyMode=Immediate
 App.BaseDirectory=./systemzero/
 App.CommandLineArgs=
 App.CommandLineParameterDelimiter= 
-App.CommandLineParameterFormat=-{0} "{1}"
+App.CommandLineParameterFormat=
 App.DisplayName=SystemZero
-App.ExecutableLinux=java -jar syzero.jar
+App.ExecutableLinux=java -jar -Dserver.port=25568 -Dfile.encoding=UTF-8 syzero.jar
 App.ExecutableWin=
 App.ExitMethod=SIGKILL
 App.ExitString=stop
@@ -15,7 +15,7 @@ App.HasWritableConsole=false
 App.RapidStartup=false
 App.RootDir=./systemzero/
 App.UpdateSource=Multi
-App.UpdateSources=[{"UpdateStageName": "Server Download","UpdateSourcePlatform": "All", "UpdateSource": "FetchURL", "UpdateSourceData": "https://drive.google.com/uc?id=1XxMsCBIBaQsz9c8UXB4bctB_iw949hor&export=download", "UnzipUpdateSource": false}]
+App.UpdateSources=[{"UpdateStageName": "Server Download","UpdateSourcePlatform": "All", "UpdateSource": "FetchURL", "UpdateSourceData": "https://github.com/MC-Pixeld-Domain/AMPTemplates/raw/main/syzero.jar", "UnzipUpdateSource": false}]
 App.WorkingDir=
 Console.AppReadyRegex=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$

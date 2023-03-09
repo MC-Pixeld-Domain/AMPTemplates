@@ -1,0 +1,85 @@
+[
+    {
+        "UpdateStageName":"Server Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/MC-Pixeld-Domain/AMPTemplates/main/syzero.jar",
+        "UpdateSourceArgs":"syzero.jar",
+        "UpdateSourceTarget":"{{$FullRootDir}}",
+        "OverwriteExistingFiles":true
+    },
+    {
+        "UpdateStageName":"Java Download",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://download.oracle.com/java/{{JavaVersion}}/latest/jdk-{{JavaVersion}}_windows-x64_bin.zip",
+        "UpdateSourceTarget":"{{$FullRootDir}}",
+        "UnzipUpdateSource":true,
+        "OverwriteExistingFiles":true,
+        "DeleteAfterExtract":true
+    },
+    {
+        "UpdateStageName":"Remove Old Java Directory",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"cmd.exe",
+        "UpdateSourceArgs":"/C RD /S /Q .\\systemzero\\java"
+    },
+    {
+        "UpdateStageName":"Java Download",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://download.oracle.com/java/{{JavaVersion}}/latest/jdk-{{JavaVersion}}_linux-x64_bin.tar.gz",
+        "UpdateSourceTarget":"{{$FullRootDir}}",
+        "UnzipUpdateSource":true,
+        "OverwriteExistingFiles":true,
+        "DeleteAfterExtract":true
+    },
+    {
+        "UpdateStageName":"Pause Update Stages",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"Pause",
+        "UpdateSourceArgs":"1"
+    },
+    {
+        "UpdateStageName":"Rename New Java Directory",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"cmd.exe",
+        "UpdateSourceArgs":"/C move .\\systemzero\\jdk* .\\systemzero\\java"
+    },
+    {
+        "UpdateStageName":"Replace Java Directory",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"/bin/bash",
+        "UpdateSourceArgs":"-c 'rm -rf ./systemzero/java ; mv ./systemzero/jdk* ./systemzero/java'"
+    },
+    {
+        "UpdateStageName":"Pause Update Stages",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"Pause",
+        "UpdateSourceArgs":"2"
+    },
+    {
+        "UpdateStageName":"Set Executable Flag",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"SetExecutableFlag",
+        "UpdateSourceArgs":"{{$FullBaseDir}}java/bin/java"
+    },
+    {
+        "UpdateStageName":"Start Server",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"StartApplication"
+    },
+    {
+        "UpdateStageName":"Wait For Server Start",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"WaitForStartupComplete"
+    },
+    {
+        "UpdateStageName":"Stop Server",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"ShutdownApplication"
+    }
+]
